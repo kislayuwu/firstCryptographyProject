@@ -1,9 +1,0 @@
-def machine():
-  value='abcdefghijklmnopqrstuvwxyz !'
-  key= value[-1]+value[:-1]
-  encryptDict=dict(zip(value,key))
-  decryptDict=dict(zip(key,value))
-  msg=input("enter message to be encrypted or decrypted")
-  mode=input("enter E for encryption or D for decryption")
-  if mode.upper() == 'E':
- 

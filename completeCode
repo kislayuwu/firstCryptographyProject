@@ -1,0 +1,16 @@
+def Cryptographymachine():
+    values='abcdefghijklmnopqrstuvwxyz !'
+    key=values[-1]+values[:-1]
+    encrypDict=dict(zip(values,key))
+    decrypDict=dict(zip(key,values))
+    msg=input("enter the msg to be encrypted or decrypted : ")
+    mode=input("press E for encrption or D for decryption : ")
+    if(mode.upper()=='E'):
+        newMsg=''.join(encrypDict[letter] for letter in msg.lower())
+    
+    elif(mode.upper()=='D'):
+        newMsg=''.join(decrypDict[letter] for letter in msg.lower())
+    
+    else: print("invalid input")
+    return newMsg.upper()
+print (Cryptographymachine())
